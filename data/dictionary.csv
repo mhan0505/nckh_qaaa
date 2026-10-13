@@ -1,6 +1,6 @@
 ﻿Tên cột,Ý nghĩa vật lý,Đơn vị đo,Kiểu dữ liệu,Nguồn file
 Time,Timestamp ghi nhận (giờ địa phương nơi đặt cảm biến),datetime (dd/mm/YYYY HH:MM),datetime,"01_T_H, 03_W, 05_C, 07_PH, 09_TSS, 11_SR"
-T_mangoes,Nhiệt độ ruột quả xoài (cảm biến tiếp xúc / lồng trong quả),°C,float,01_src_subset_dataset_T_H
+T_mangoes,Nhiệt độ gắn nhãn 'xoài' (mango temperature). VỊ TRÍ CẢM BIẾN CHƯA XÁC MINH (sensor placement unverified) — chưa chốt ruột vs bề mặt; hỏi cộng sự INRAE trước khi diễn giải,°C,float,01_src_subset_dataset_T_H
 T_Air,Nhiệt độ không khí bên trong thùng carton,°C,float,01_src_subset_dataset_T_H
 RH_Air,Độ ẩm tương đối không khí trong thùng,%,float,01_src_subset_dataset_T_H (file *_Temp_Hum)
 T_16C / T_21C,Nhiệt độ không khí phòng kho lưu trữ @ chế độ 16°C / 21°C (khoang ngoài),°C,float,11_src_subset_dataset_SR

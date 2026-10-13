@@ -1,0 +1,14 @@
+﻿Tên cột,Ý nghĩa vật lý,Đơn vị đo,Kiểu dữ liệu,Nguồn file
+Time,Timestamp ghi nhận (giờ địa phương nơi đặt cảm biến),datetime (dd/mm/YYYY HH:MM),datetime,"01_T_H, 03_W, 05_C, 07_PH, 09_TSS, 11_SR"
+T_mangoes,Nhiệt độ ruột quả xoài (cảm biến tiếp xúc / lồng trong quả),°C,float,01_src_subset_dataset_T_H
+T_Air,Nhiệt độ không khí bên trong thùng carton,°C,float,01_src_subset_dataset_T_H
+RH_Air,Độ ẩm tương đối không khí trong thùng,%,float,01_src_subset_dataset_T_H (file *_Temp_Hum)
+T_16C / T_21C,Nhiệt độ không khí phòng kho lưu trữ @ chế độ 16°C / 21°C (khoang ngoài),°C,float,11_src_subset_dataset_SR
+H_16C / H_21C,Độ ẩm tương đối phòng kho 16°C / 21°C,%,float,11_src_subset_dataset_SR
+M_<box>/<n>,Khối lượng quả thứ n trong box <box> (vd M_1_1_1/1),g,float,03_src_subset_dataset_W
+L_D<k>,"Độ sáng màu vỏ quả tại ngày đo D<k>, k = số ngày sau đóng gói (L*a*b*)",đơn vị L* (0–100),float,05_src_subset_dataset_C
+a_D<k>,Trục màu đỏ (+)/xanh lục (−) tại ngày D<k>,đơn vị a*,float,05_src_subset_dataset_C
+b_D<k>,Trục màu vàng (+)/xanh lam (−) tại ngày D<k> — chỉ báo chín/vàng hóa,đơn vị b*,float,05_src_subset_dataset_C
+BOX_NAME,Nhãn vị trí đo màu: <Box>/<Mango>-<mã điểm đo> (vd 1_1_1/1-1A),chuỗi,str,05_src_subset_dataset_C
+pH (cột M_...),"Độ chua thịt quả của quả được chỉ định, đo định kỳ theo ngày",pH,float,07_src_subset_dataset_PH
+TSS (cột M_...),Tổng chất rắn hòa tan — độ ngọt,°Brix,float,09_src_subset_dataset_TSS

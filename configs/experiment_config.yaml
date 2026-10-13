@@ -1,0 +1,50 @@
+# EXPERIMENT CONFIGURATION
+project_name: "mango_cold_chain_rsl"
+seed: 42
+
+data:
+  raw_sensor_dir: "data/raw/sensor"
+  raw_quality_dir: "data/raw/quality"
+  processed_dir: "data/processed"
+  features_dir: "data/features"
+  train_split_ratio: 0.8
+  n_splits: 5
+  group_column: "box_id"
+
+exposure:
+  sampling_interval_min: 5
+  chilling_threshold_celsius: 12.0
+  heat_threshold_moderate_celsius: 20.0
+  heat_threshold_severe_celsius: 25.0
+
+targets:
+  primary: "mass_loss_pct"
+  secondary: "color_b_star"
+  mass_loss_failure_threshold_pct: 10.0
+  retail_required_shelf_life_days: 4.0
+
+models:
+  linear:
+    alphas: [0.01, 0.1, 1.0, 10.0]
+  random_forest:
+    n_estimators: 100
+    max_depth: 8
+    random_state: 42
+  xgboost:
+    n_estimators: 150
+    learning_rate: 0.05
+    max_depth: 6
+    subsample: 0.8
+    random_state: 42
+  hybrid_dl:
+    conv_filters: 32
+    kernel_size: 3
+    latent_dim: 16
+    dense_units: [64, 32]
+    epochs: 50
+    batch_size: 16
+    lr: 0.001
+
+rsl:
+  num_bootstrap_samples: 500
+  confidence_level: 0.95
